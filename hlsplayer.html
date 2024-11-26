@@ -83,7 +83,7 @@
     </video>
 
     <script>
-        setTimeout(videovisible, 3000);
+        setTimeout(videovisible, 9000);
 
         function videovisible() {
             document.getElementById('loading').style.display = 'none';
@@ -101,7 +101,7 @@
             }
 
             if (Hls.isSupported()) {
-                const hlsConfig = { maxMaxBufferLength: 10 };
+                const hlsConfig = { maxMaxBufferLength: 2 };
                 const hls = new Hls(hlsConfig);
                 hls.loadSource(streamUrl);
                 hls.on(Hls.Events.MANIFEST_PARSED, function(event, data) {
