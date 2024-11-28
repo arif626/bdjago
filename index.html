@@ -198,7 +198,7 @@
         }
 
         // Fetch the playlist from the external file
-        fetch('playlist.m3u8')
+        fetch('https://raw.githubusercontent.com/aniketda/iptvtest/refs/heads/main/iptvtest')
             .then(response => response.text())
             .then(playlist => {
                 const channels = parseM3U8(playlist);
